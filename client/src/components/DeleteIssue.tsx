@@ -4,6 +4,13 @@ import { Field, Formik } from "formik";
 import { issueIdSchema } from "../lib/common";
 import { deleteIssue } from "../lib/issues";
 
+/*
+ * Component for deleting an issue
+ * Renders form and sends request
+ *
+ * Accepts a onIssueDelete prop as a callback when an issue is deleted
+ */
+
 interface Props {
   onIssueDelete: () => void;
 }

@@ -4,6 +4,13 @@ import { Field, Formik } from "formik";
 import { issueSchema } from "../lib/common";
 import { createIssue } from "../lib/issues";
 
+/*
+ * Component for updating an issue
+ * Renders form and sends request 
+ * 
+ * Accepts a onIssueUpdate prop as a callback when an issue is updated
+ */
+
 interface Props {
   onIssueUpdate: () => void;
 }

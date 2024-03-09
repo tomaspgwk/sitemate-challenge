@@ -10,12 +10,14 @@ import {
 const router = express.Router();
 router.use("/", express.json());
 
+// Route to get all issues as JSON List
 router.get("/", (req, res) => {
   res.setHeader("Content-Type", "application/json");
   const allIssues = getIssues();
   res.end(JSON.stringify(allIssues));
 });
 
+// Route to get an specific Issue Object by the ID as route parameter
 router.get("/:id", (req, res) => {
   res.setHeader("Content-Type", "application/json");
 
@@ -37,6 +39,7 @@ router.get("/:id", (req, res) => {
   res.end();
 });
 
+// Route to create a New Issue
 router.post("/", (req, res) => {
   res.set("Content-Type", "text/html");
   try {
@@ -55,6 +58,7 @@ router.post("/", (req, res) => {
   res.end();
 });
 
+// Route to update and Issue
 router.patch("/", (req, res) => {
   res.set("Content-Type", "text/html");
   try {
@@ -73,6 +77,7 @@ router.patch("/", (req, res) => {
   res.end();
 });
 
+// Route to delete an Issue by the ID as route parameter
 router.delete("/:id", (req, res) => {
   res.set("Content-Type", "text/html");
   const issueId = parseInt(req.params.id);
