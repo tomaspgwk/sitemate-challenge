@@ -1,0 +1,4 @@
+# Sitemate Challenge
+
+Run server with: npm run start
+Run client from inside client folder with: npm run dev
